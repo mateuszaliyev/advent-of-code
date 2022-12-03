@@ -3,9 +3,7 @@ import { sum } from "@/utilities/array.ts";
 import { getRounds } from "./common.ts";
 
 const result = sum(
-  getRounds().map((
-    round,
-  ) => ({
+  getRounds().map((round) => ({
     "A X": 1 + 3,
     "A Y": 2 + 6,
     "A Z": 3 + 0,
