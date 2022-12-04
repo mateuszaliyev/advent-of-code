@@ -5,16 +5,10 @@ const input = await getInput(import.meta.url);
 
 export const getAssignmentPairs = () =>
   input.split(EOL).map((pair) =>
-    pair.split(",").reduce<[number[], number[]]>(
-      (ranges, sections, index) => {
-        const [start, end] = sections.split("-").map(Number);
-
-        for (let section = start; section <= end; section++) {
-          ranges[index].push(section);
-        }
-
-        return ranges;
-      },
-      [[], []]
-    )
+    pair
+      .split(",")
+      .map((sections) => sections.split("-").map(Number))
+      .map(([start, end]) =>
+        Array.from({ length: end + 1 - start }, (_, index) => index + start)
+      )
   );
