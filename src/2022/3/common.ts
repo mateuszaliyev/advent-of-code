@@ -2,7 +2,7 @@ import { EOL } from "@/utilities/eol.ts";
 import { getInput } from "@/utilities/get-input.ts";
 
 const priorities = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split(
-  "",
+  ""
 );
 
 export const getPriority = (item: string) =>

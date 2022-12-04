@@ -84,6 +84,18 @@ Using `SESSION` environment variable.
 deno run --allow-env --allow-net=adventofcode.com,deno.land --allow-read ./src/scripts/private.ts --leaderboard 123456 --day 1 --part 2
 ```
 
+### Formatting
+
+For consistency with my other projects, use [Prettier](https://prettier.io/)
+instead of [`deno fmt`](https://deno.land/manual@v1.28.3/tools/formatter) when
+formatting code.
+
+```bash
+npx prettier --write .
+
+pnpm dlx prettier --write .
+```
+
 ## Authors
 
 - Mateusz Aliyev ([@mateuszaliyev](https://github.com/mateuszaliyev))
