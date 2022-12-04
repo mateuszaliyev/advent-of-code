@@ -7,10 +7,10 @@ export const getInput = (baseUrl: string, file?: InputFile) =>
     new URL(
       `./${
         file ??
-          (INPUT_FILES.includes(Deno.args[0] as InputFile)
-            ? Deno.args[0]
-            : "input")
+        (INPUT_FILES.includes(Deno.args[0] as InputFile)
+          ? Deno.args[0]
+          : "input")
       }.txt`,
-      baseUrl,
-    ),
+      baseUrl
+    )
   );

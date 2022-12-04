@@ -1,16 +1,16 @@
 export const chunk = <T>(array: T[], size: number): T[][] =>
   size > 0
     ? array.reduce<T[][]>((chunks, value, index) => {
-      const chunkIndex = Math.floor(index / size);
+        const chunkIndex = Math.floor(index / size);
 
-      if (!chunks[chunkIndex]) {
-        chunks.push([]);
-      }
+        if (!chunks[chunkIndex]) {
+          chunks.push([]);
+        }
 
-      chunks[chunkIndex].push(value);
+        chunks[chunkIndex].push(value);
 
-      return chunks;
-    }, [])
+        return chunks;
+      }, [])
     : [array];
 
 export const sum = (array: number[]) =>
