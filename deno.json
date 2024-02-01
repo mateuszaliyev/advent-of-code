@@ -1,7 +1,13 @@
 {
   "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
   "compilerOptions": {
+    "noUncheckedIndexedAccess": true,
     "strict": true
   },
-  "importMap": "./import-map.json"
+  "importMap": "./import-map.json",
+  "tasks": {
+    "content": "deno run --allow-env --allow-read=. --allow-net=adventofcode.com --allow-write=./src ./src/scripts/content.ts",
+    "leaderboard": "deno run --allow-env --allow-read=. --allow-net=adventofcode.com ./src/scripts/leaderboard.ts",
+    "watch": "deno run --allow-read=./src --watch"
+  }
 }
